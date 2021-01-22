@@ -90,13 +90,13 @@ router.put("/:id", function (req, res) {
 
     data.splice(targetIndex, 1, updated);
 
-    res.sendStatus(204)
+    res.sendStatus(204);
   } else {
-    res.sendStatus(500)
+    res.sendStatus(500);
   }
 });
-/*
-router.<<todo_delete>>('<<todo_delete>>', function (req, res) {
+
+router.delete("/:id", function (req, res) {
   let found = data.find(function (item) {
     return item.id === parseInt(req.params.id);
   });
@@ -107,7 +107,7 @@ router.<<todo_delete>>('<<todo_delete>>', function (req, res) {
     data.splice(targetIndex, 1);
   }
 
-  //TODO: Retornar status 204
-});*/
+  res.sendStatus(204);
+});
 
 module.exports = router;
