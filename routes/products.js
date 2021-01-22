@@ -49,7 +49,6 @@ router.get("/:id", function (req, res) {
   });
 
   if (found) {
-    //TODO: Retornar los valores de la variable found
     res.status(200).json(found);
   } else {
     res.sendStatus(404);
@@ -73,25 +72,30 @@ router.post("/", function (req, res) {
 
   res.status(201).json(newItem);
 });
-/*
-router.<<todo_put>>('/:id', function (req, res) {
+
+router.put("/:id", function (req, res) {
   let found = data.find(function (item) {
     return item.id === parseInt(req.params.id);
   });
 
   if (found) {
-    // TODO: Actualizar los valores (similar a como se hizo en post)
+    let updated = {
+      id: found.id,
+      name: req.body.name,
+      value: req.body.value,
+      isAvailable: req.body.isAvailable,
+    };
 
     let targetIndex = data.indexOf(found);
 
     data.splice(targetIndex, 1, updated);
 
-    //TODO: Retornar status 204
+    res.sendStatus(204)
   } else {
-      //TODO: Retornar status 204
+    res.sendStatus(500)
   }
 });
-
+/*
 router.<<todo_delete>>('<<todo_delete>>', function (req, res) {
   let found = data.find(function (item) {
     return item.id === parseInt(req.params.id);
