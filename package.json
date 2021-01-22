@@ -1,0 +1,22 @@
+{
+  "name": "products_api_nodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alycolbar/products_api_nodejs.git"
+  },
+  "author": "Alice Colman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alycolbar/products_api_nodejs/issues"
+  },
+  "homepage": "https://github.com/alycolbar/products_api_nodejs#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
